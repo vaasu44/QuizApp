@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #648bc8, #d06bcd);
+}
+
+#start-sess {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#start-sess h1 {
+    color: #d9e4e3;
+    margin-bottom: 15px;
+}
+
+#start,
+#continue,
+#quit {
+    background: red;
+    padding: 10px 25px;
+    border-radius: 10px;
+    border: none;
+    color: #d9e4e3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.app {
+    display: none;
+    background: #ffff;
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.app header h1 {
+    text-align: center;
+    font-size: 25px;
+    color: black;
+    font-weight: 600;
+    border-bottom: 3px solid #3333;
+    padding-bottom: 20px;
+}
+
+.timer {
+    margin-top: 10px;
+    width: 145px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #cce5ff;
+    border: 1px solid #b8daff;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.timer .time-text {
+    color: #ee745e;
+    user-select: none;
+    font-weight: 700;
+}
+
+.time-sec {
+    font-size: 18px;
+    font-weight: 700;
+    background: #343a40;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #343a40;
+    user-select: none;
+}
+
+.quiz {
+    padding: 20px 0;
+}
+
+.quiz h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #3368bd;
+}
+
+.btn {
+    background: #ffff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 2px solid #1d1c1c22;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.btn:hover:not([disabled]) {
+    background: #222;
+    color: #fff;
+    font-weight: bold;
+}
+
+.btn:disabled {
+    cursor: no-drop;
+}
+
+#next-btn {
+    background: linear-gradient(to right, #88a5d3, #c688c4);
+    color: #d9e4e3;
+    font-weight: bolder;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.correct {
+    background: #9aeabc;
+}
+
+.wrong {
+    background: #ff9393;
+}
+
+.instructions {
+    display: none;
+    background: #ffff;
+    width: 90%;
+    width: 500px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+#gap {
+    margin: 15px 0;
+    width: auto;
+}
+
+.instructions p {
+    margin: 8px 0;
+}
+
+#exit,
+#restart {
+    background: #3e94c6;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#exit:hover {
+    background: #fff;
+    color: #3e94c6;
+    border: 1px solid #3e94c6;
+}
+
+#exit:active {
+    background: #9fd1ef;
+    opacity: 0.7;
+}
+
+#continue:active,
+#quit:active {
+    opacity: 0.7;
+}
+
+.result {
+    display: none;
+    /* display: flex; */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 500px;
+    height: 250px;
+    background: #d9e4e3;
+    border-radius: 8px;
+}
+
+.result i {
+    font-size: 5em;
+    text-align: center;
+    margin-left: -20px;
+    color: #0d4bad;
+}
+
+.result div {
+    margin-top: 20px;
+}
+
+#restart {
+    margin-right: 15px;
+}
+
+#restart:active {
+    opacity: 0.6;
+}
+
+@media only screen and (max-width:600px) {
+    .instructions {
+        width: 100%;
+        margin: 10px;
+        font-size: 15px;
+    }
+    .result {
+        width: 100%;
+        margin: 10px;
+    }
+}
